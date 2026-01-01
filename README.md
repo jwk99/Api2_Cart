@@ -56,6 +56,7 @@ OrderItems(Id, OrderId, ProductId, Qty, Price)
 
 ## Uruchomienie projektu
 
+- Sklonuj repozytorium.
 - Skonfiguruj połączenie do SQL Server w appsettings.json
 - Uruchom aplikację:
 ```
