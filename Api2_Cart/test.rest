@@ -1,0 +1,49 @@
+@baseUrl = https://localhost:7271
+// Products
+###Get Products
+GET {{baseUrl}}/api/products
+Accept: application/json
+
+###Create Product (correct)
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+{
+  "name":"Słuchawki",
+  "price":159.99
+}
+
+###Create Product (wrong price)
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+{
+  "name":"Błąd",
+  "price":-10.00
+}
+###Cart
+
+###Get cart
+GET {{baseUrl}}/api/cart
+Accept: application/json
+
+###Add to cart
+POST {{baseUrl}}/api/cart/add
+Content-Type:application/json
+{
+  "productId":3,
+  "qty":4
+}
+###Update cart
+PATCH {{baseUrl}}/api/cart/item
+Content-Type:application/json
+{
+  "productId":3,
+  "qty":5
+}
+###Checkout
+POST {{baseUrl}}/api/checkout
+Content-Type:application/json
+{}
+
+###Cart after checkout (should be empty)
+GET {{baseUrl}}/api/cart
+Accept: application/json
