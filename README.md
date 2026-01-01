@@ -58,6 +58,7 @@ OrderItems(Id, OrderId, ProductId, Qty, Price)
 
 - Sklonuj repozytorium.
 - Skonfiguruj połączenie do SQL Server w appsettings.json
+- Utwórz bazę danych i uruchom skrypt sql.
 - Uruchom aplikację:
 ```
 dotnet run
